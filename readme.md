@@ -1,108 +1,134 @@
-rondo-Man
+# rondo-man
 
-rondo-Man is a Linux utility designed to make your day-to-day tasks easier with some cool features! It can help you with cleaning up temporary files, generating random ASCII art, calculating the size of directories, and more—all from the command line.
+`rondo-Man` is a Linux utility designed to simplify common tasks with an array of helpful features that can be accessed via the command line. From cleaning up temporary files to generating random ASCII art, `rondo-Man` makes your workflow easier and more fun!
 
-Features:
-- Deletes Temporary or Unused Files: Removes files that have not been used in a specified time period.
-- Create Temporary File for Coding: Creates a temporary file for coding and opens it in Neovim.
-- Random ASCII Art Generator: Displays a random ASCII logo or pattern on execution.
-- Calculate Directory Size: Quickly calculates and displays the total size of a directory and its subdirectories.
-- Custom Timer/Reminder Tool: Set up custom timers and receive notifications when they end.
-- Displays Current Running Tasks: Displays the current running tasks on your system.
+## **Features**
 
-Prerequisites
+- **Delete Temporary or Unused Files**: Remove files that haven’t been accessed in a specified time period.
+- **Create Temporary File for Coding**: Automatically create a temporary file and open it in Neovim for quick coding.
+- **Random ASCII Art Generator**: Display a random ASCII logo or pattern every time you run the tool.
+- **Calculate Directory Size**: Quickly calculate and display the size of a directory, including its subdirectories.
+- **Custom Timer/Reminder Tool**: Set up custom timers and receive notifications when they expire.
+- **Display Current Running Tasks**: View the tasks currently running on your system.
 
-To build rondo-Man from source, you'll need:
-- g++: The GNU C++ compiler.
-- neovim: A modern, powerful text editor for creating and editing code.
-- make (optional): To automate the build process (for compiling and managing dependencies).
+## **Prerequisites**
 
-On Linux, you can install these dependencies using the following commands:
+Before you begin, make sure you have the following installed:
 
-    sudo apt-get update
-    sudo apt-get install g++ neovim make
+- **g++**: The GNU C++ compiler for building the utility.
+- **neovim**: A modern text editor for coding.
+- **make** (optional): For automating the build process.
 
-Installing
+To install the dependencies on Linux:
 
-You have a few ways to get started with rondo-Man:
+```bash
+sudo apt-get update
+sudo apt-get install g++ neovim make
+```
 
-1. Build it from source (manual installation)
+## **Installation**
 
-To compile and install rondo-Man manually, follow these steps:
+You can install `rondo-Man` in two ways:
 
-    1. Clone this repository:
+### **1. Manual Installation (Build from Source)**
 
-       git clone https://github.com/yourusername/rondo-man.git
-       cd rondo-man
+Follow these steps to compile `rondo-Man` from source:
 
-    2. Compile the source code:
+1. Clone the repository:
 
-       g++ src/main.cpp utils/cat.cpp -o rondo-man
+    ```bash
+    git clone https://github.com/yourusername/rondo-man.git
+    cd rondo-man
+    ```
 
-    3. Optionally, move the compiled binary to a directory in your $PATH, such as /usr/local/bin:
+2. Compile the source code:
 
-       sudo mv rondo-man /usr/local/bin/
+    ```bash
+    g++ src/main.cpp utils/cat.cpp -o rondo-man
+    ```
 
-    4. Make the binary executable (if not already done):
+3. (Optional) Move the compiled binary to a directory in your `$PATH`:
 
-       sudo chmod +x /usr/local/bin/rondo-man
+    ```bash
+    sudo mv rondo-man /usr/local/bin/
+    ```
 
-2. Using the provided script.bash
+4. Make the binary executable (if not already):
 
-If you just want to install rondo-Man and don’t want to handle dependencies manually, use the script.bash included in the repository:
+    ```bash
+    sudo chmod +x /usr/local/bin/rondo-man
+    ```
 
-    1. Run the installation script:
+### **2. Installation via `script.bash`**
 
-       ./script.bash
+If you prefer not to handle dependencies manually, you can use the included installation script:
 
-       This script will compile the code and install rondo-Man into the appropriate directory ($HOME/bin or /usr/local/bin depending on the flag).
+1. Run the installation script:
 
-Usage
+    ```bash
+    ./script.bash
+    ```
 
-Once installed, you can run rondo-Man from the command line with one of the following commands:
+    This will compile the code and install `rondo-Man` in the appropriate directory (`$HOME/bin` or `/usr/local/bin` depending on the flag used).
 
-- Generate a random ASCII art/logo or pattern:
+## **Usage**
 
-    rondo-man
+Once installed, you can run `rondo-Man` from the command line with various commands:
 
-- Generate a random ASCII cat image:
+ 
 
+- **Generate a random ASCII cat image**:
+
+    ```bash
     rondo-man cAt!
+    ```
 
-- Display help information:
+- **Display help information**:
 
+    ```bash
     rondo-man --help
+    ```
 
-- Delete unused files (use with caution):
+- **Delete unused files (use with caution)**:
 
+    ```bash
     rondo-man delete --older-than 30
+    ```
 
-    This command deletes files that have not been used in the last 30 days.
+    This deletes files not accessed in the last 30 days.
 
-- Create a temporary file for coding and open it in Neovim:
+- **Create a temporary file for coding and open it in Neovim**:
 
+    ```bash
     rondo-man create-temp-file
+    ```
 
-- Calculate and display the size of a directory:
+- **Calculate and display the size of a directory**:
 
+    ```bash
     rondo-man size /path/to/directory
+    ```
 
-- Set a custom timer/reminder:
+- **Set a custom timer/reminder (in minutes)**:
 
+    ```bash
     rondo-man timer 10
+    ```
 
     This command sets a timer for 10 minutes.
 
-- Display current running tasks:
+- **Display current running tasks**:
 
+    ```bash
     rondo-man tasks
+    ```
 
-    This command shows the currently running tasks on your system.
+    Shows currently running tasks on your system.
 
-Contributing
+## **Contributing**
 
-Feel free to open issues or pull requests if you have suggestions or improvements for rondo-Man. We welcome contributions!
+Contributions to `rondo-Man` are welcome! Feel free to open issues or submit pull requests if you have suggestions or improvements.
 
-License
+ 
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+ **
