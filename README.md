@@ -45,7 +45,7 @@ Follow these steps to compile rondo-Man from source:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/rondo-man.git
+    git clone https://github.com/srujaniyengar/rondo-man.git
     cd rondo-man
     ```
 
