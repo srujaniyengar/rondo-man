@@ -1,11 +1,12 @@
 
 CXX = g++
-CXXFLAGS = -std=c++14 -Wall
+CXXFLAGS = -std=c++17 -Wall -Wextra
 TARGET = rondo-man
 SRC_DIR = src
 UTILS_DIR = utils
-SRC = $(SRC_DIR)/main.cpp $(UTILS_DIR)/cat.cpp
+SRC = $(SRC_DIR)/main.cpp $(UTILS_DIR)/cat.cpp $(UTILS_DIR)/size.cpp
 OBJ = $(SRC:.cpp=.o)
+INSTALL_DIR = /usr/local/bin
 
 .PHONY: all clean install uninstall
 
@@ -21,9 +22,12 @@ clean:
 	rm -f $(OBJ) $(TARGET)
 
 install: $(TARGET)
-	@echo "Installing $(TARGET) to /usr/local/bin..."
-	@sudo cp $(TARGET) /usr/local/bin
+	@echo "Installing $(TARGET) to $(INSTALL_DIR)..."
+	@sudo cp $(TARGET) $(INSTALL_DIR)
+	@echo "Installation complete!"
 
 uninstall:
-	@echo "Removing $(TARGET) from /usr/local/bin..."
-	@sudo rm -f /usr/local/bin/$(TARGET)
+	@echo "Removing $(TARGET) from $(INSTALL_DIR)..."
+	@sudo rm -f $(INSTALL_DIR)/$(TARGET)
+	@echo "Uninstallation complete!"
+
