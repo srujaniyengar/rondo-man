@@ -24,7 +24,6 @@ void Size::getSize() {
             }
         }
     } catch (const fs::filesystem_error&) {
-        // Skip inaccessible directories
     }
 }
 
