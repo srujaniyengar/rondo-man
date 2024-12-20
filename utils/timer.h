@@ -5,8 +5,8 @@
 #include<iostream>
 class Timer{
 private:
-  int minutes;
-  int seconds;
+  int min;
+  int sec;
 public:
   Timer();
   Timer(int);
