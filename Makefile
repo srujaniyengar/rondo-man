@@ -1,10 +1,9 @@
-
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra
 TARGET = rondo-man
 SRC_DIR = src
 UTILS_DIR = utils
-SRC = $(SRC_DIR)/main.cpp $(UTILS_DIR)/cat.cpp $(UTILS_DIR)/size.cpp
+SRC = $(SRC_DIR)/main.cpp $(UTILS_DIR)/cat.cpp $(UTILS_DIR)/size.cpp $(UTILS_DIR)/timer.cpp
 OBJ = $(SRC:.cpp=.o)
 INSTALL_DIR = /usr/local/bin
 
