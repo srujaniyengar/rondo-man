@@ -1,0 +1,47 @@
+# Compiled binaries and object files
+rondo-man
+*.o
+*.out
+*.exe
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+*.log
+
+# Dependency directories (if any)
+node_modules/
+target/
+build/
+dist/
+
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Rust-specific
+Cargo.lock
+target/
+
+# CMake & Makefiles
+CMakeCache.txt
+CMakeFiles/
+Makefile
+*.cmake
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Docker-related
+docker-compose.override.yml
+*.tar
