@@ -1,47 +1,62 @@
-# Compiled binaries and object files
+
+# Compiled binaries (Linux, macOS, Windows)
 rondo-man
-*.o
 *.out
+*.o
 *.exe
+*.dll
+*.so
+*.dylib
 
 # Temporary files
+*.log
 *.tmp
 *.swp
-*.swo
 *.bak
-*.log
+*.lock
 
-# Dependency directories (if any)
-node_modules/
-target/
+# Build directories (CMake, Make, Rust, Go, Node.js, etc.)
 build/
 dist/
-
-# Python-related
+target/
+bin/
+obj/
+node_modules/
+vendor/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+
+# C++/C build artifacts
+*.a
+*.la
+*.lo
+*.slo
+*.mod
 
 # Rust-specific
 Cargo.lock
 target/
 
-# CMake & Makefiles
-CMakeCache.txt
-CMakeFiles/
-Makefile
-*.cmake
+# Python-related
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
 
-# Editor/IDE specific files
+# Go-specific
+*.mod
+*.sum
+
+# OS-specific
+.DS_Store        # macOS
+Thumbs.db        # Windows
+ehthumbs.db      # Windows
+
+# Editor/IDE-specific
 .vscode/
 .idea/
 *.code-workspace
 
-# System files
-.DS_Store
-Thumbs.db
-
 # Docker-related
 docker-compose.override.yml
 *.tar
+
